@@ -1,0 +1,351 @@
+body {
+    background: rgba(255, 255, 0, .2);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#wrap {
+    width: 1400px;
+    height: 1200px;
+    background: white;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.register-switch {
+    width: 330px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+
+.register-switch div {
+    width: 124px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    background: #F4F2F1;
+    color: #A8A7A7;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.register-switch div:nth-child(1) {
+    background: #D54831;
+    color: white;
+}
+
+.register-switch div:nth-child(2) {
+    float: right;
+
+}
+
+
+/* 个人注册 */
+.person-register {
+    width: 330px;
+    height: 440px;
+    margin: 30px auto;
+}
+
+.person-register input,
+.person-register button,
+.check-code {
+    width: inherit;
+    height: 48px;
+}
+
+.check-code a {
+    display: inline-block;
+    /* color: blue; */
+    text-decoration: underline;
+}
+
+/* 给所有表单边框变圆 */
+.person-register>*:not(.check-code),
+.check-code>input {
+    border: none;
+    border: 1px #EDEDED solid;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+/* 给除了button以外的子元素一个距离 */
+.person-register>*:not(button) {
+    margin-top: 20px;
+}
+
+/* 给placeholder样式 */
+.person-register>::-webkit-input-placeholder,
+.check-code input {
+    padding-left: 30px;
+    font-size: 14px;
+    opacity: .7;
+}
+
+.check-code input {
+    width: 114px;
+}
+
+.check-code div {
+    float: right;
+}
+
+.check-code a {
+    vertical-align: top;
+}
+
+.person-register>button {
+    margin-top: 50px;
+    background: #F99507;
+    color: white;
+}
+
+/* 企业注册 */
+.enterprise-register {
+    width: 520px;
+    height: 520px;
+    margin: 36px auto;
+    text-align: center;
+}
+
+.step-div {
+    width: 520px;
+    height: 40px;
+    position: relative;
+}
+
+.step-div>div {
+    float: left;
+}
+
+/* 步骤数字球css */
+.step-num {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    background: #F99507;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* 步骤线 */
+.step-line {
+    width: 100px;
+    height: 6px;
+    line-height: 40px;
+    background: #F99507;
+    margin-top: 17px;
+}
+
+.step-div .step-two,
+.step-three {
+    color: #848484;
+    background: #DDDDDD;
+}
+
+.step-div span {
+    position: absolute;
+    font-size: 12px;
+}
+
+/* 步骤文字定位 */
+.step-div span:nth-of-type(1) {
+    bottom: -20px;
+    left: -16px;
+    color: #F99507;
+}
+
+.step-div span:nth-of-type(2) {
+    bottom: -20px;
+    left: 44%;
+    color: #848484;
+}
+
+.step-div span:nth-of-type(3) {
+    bottom: -20px;
+    right: -6px;
+    color: #848484;
+}
+
+/* 企业注册输入区第一步 */
+.first-step {
+    width: 330xpx;
+    height: 450px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.first-step .checkCode {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    position: absolute;
+    background: white;
+    top: 82.5%;
+    right: 22%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    vertical-align: baseline;
+    border: 1px #EDEDED solid;
+}
+
+.first-step span:hover {
+    background: rgba(209, 197, 197, .2);
+}
+
+.first-step input,
+.first-step button {
+    width: 330px;
+    height: 48px;
+    border: none;
+    border: 1px #EDEDED solid;
+    margin-top: 20px;
+}
+
+.enterprise-register ::-webkit-input-placeholder {
+    padding-left: 30px;
+    font-size: 14px;
+    opacity: .7;
+}
+
+.first-step button {
+    background: #F99507;
+    color: white;
+}
+
+/* 企业注册输入区第二步 */
+.second-step {
+    width: 800px;
+    /* height: 600px; */
+    margin: 50px auto;
+    /* border: 1px red solid; */
+    font-size: 14px;
+    font-family: '微软雅黑';
+    /* font-weight: bold; */
+    color: #808181;
+    text-align: left;
+}
+
+.second-step li {
+    margin-top: 18px;
+}
+
+.second-step label {
+    display: inline-block;
+    width: 90px;
+    margin-right: 30px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.second-step input[type="text"],
+.second-step select {
+    width: 355px;
+    height: 40px;
+    text-indent: 10px;
+    outline: none;
+    color: #808181;
+}
+
+.second-step textarea {
+    width: 500px;
+    height: 110px;
+}
+
+.second-step .flie-box {
+    position: relative;
+    display: inline-block;
+
+}
+
+.second-step .flie-box .file-img {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    background-image: url(../img/fileadd.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+.second-step .flie-box .flie-add {
+    width: 200px;
+    height: 36px;
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.second-step button {
+    width: 340px;
+    height: 70px;
+    background-color: #f99507;
+    border: none;
+    border-radius: 4px;
+    margin: 40px auto;
+    color: white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+
+/* .second-step div>div {
+    margin-top: 14px;
+}
+
+.second-step input,
+.second-step button {
+    width: 320px;
+    height: 30px;
+    border: none;
+    border: 1px #EDEDED solid;
+
+}
+
+.second-step textarea {
+    resize: none;
+}
+
+.second-step button {
+    margin-left: 18%;
+    background: #F99507;
+    color: white;
+} */
+
+
+/* 企业注册输入区第三步 */
+.third-step {
+    width: 250px;
+    height: 120px;
+    margin: 170px auto;
+    font-size: 15px;
+}
+
+.third-step p {
+    margin-top: 40px;
+}
