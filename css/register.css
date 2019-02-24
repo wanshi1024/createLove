@@ -286,14 +286,15 @@ ul {
     background-image: url(../img/fileadd.png);
     background-repeat: no-repeat;
     background-size: 90%;
+    cursor: pointer;
 }
 
 .second-step .flie-box .flie-add {
     width: 200px;
     height: 36px;
     position: absolute;
-    left: -100px;
-    top: 0;
+    left: 0;
+    top: 44px;
     z-index: 1;
     filter: alpha(opacity=0);
     opacity: 0;
