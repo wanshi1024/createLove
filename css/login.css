@@ -1,183 +1,132 @@
-body {
-    margin: 0;
-    box-sizing: border-box;
+.wrap {
+    width: 1600px;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    overflow: hidden;
-    display: block;
-}
-
-.clearfix {
-    zoom: 1;
-}
-
-.right {
-    float: right
-}
-
-.left {
-    float: left;
-}
-
-.LoginBox {
-    min-width: 1600px;
-}
-
-.LoginBox .LandingForm {
+.login-box {
     width: 330px;
-    margin-left: 70%;
-    padding: 60px;
-    text-align: center;
+    height: 480px;
+    margin-left: 75%;
+    margin-top: 2%;
     background: white;
-
 }
 
-.LoginBox .LandingForm h3 {
-    padding: 0;
-    font-size: 26px;
-    font-weight: normal;
-    margin: 0 auto;
+/* 登录切换 */
+
+.login-box header span {
+    display: inline-block;
+    width: 50%;
+    height: 60px;
+    background: #ddd;
+    color: white;
+    line-height: 60px;
     text-align: center;
-    margin: 20px auto
+    font-size: 20px;
+    cursor: pointer;
+}
+/* .choose-active{
+    background-color: white;
+    color: black
+} */
+
+.form {
+    text-align: center
 }
 
-.LoginBox .LandingForm form {
-    width: 100%;
-
-
-}
-
-.LoginBox .LandingForm form>input {
-    display: block;
-    width: 100%;
-    margin-top: 26px;
+.form>* {
+    width: 250px;
     height: 46px;
-    border-radius: 2px;
-    /*outline: none;
-    */border: 1px #cccccc solid;
-    text-align: center;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-}
-
-.LoginBox .LandingForm form>input::placeholder {
-    text-align: center;
-}
-
-.LoginBox .LandingForm form .FormValidate>* {
-
     margin-top: 20px;
 }
 
-.LoginBox .LandingForm form .FormValidate input {
-    width: 165px;
-    display: block;
-    height: 46px;
+.form input {
+    border: 1px #cccccc solid;
     border-radius: 2px;
-    /*outline: none;
-    */border: 1px #cccccc solid;
-    text-align: center;
-    margin-right: 15px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+    text-indent: 1.5em;
 }
 
-.LoginBox .LandingForm form .FormValidate a,
-.LoginBox .LandingForm form .FormValidate div {
-    margin-top: 28px;
+.form input::placeholder {
+    text-indent: 1.5em;
 }
 
-.LandingForm button {
-    display: block;
-    width: 100%;
-    height: 50px;
-    border-radius: 2px;
-    margin-top: 40px;
-    background-color: #d54831;
-    /*outline: none;
-    */border: none;
+.form .check-code {
+    position: relative;
+}
+
+.form .check-code input {
+    width: 42%;
+    height: 40px;
+    float: left;
+    margin-left: 15%;
+}
+
+.form .check-code img{
+    position: absolute;
+    top: 16%;
+    right: -16%;
+}
+.form .check-code a{
+    position: absolute;
+    top: 18%;
+    right: 18%;
+    text-decoration: underline #3A568A;
+    color: #3A568A
+}
+
+.form button{
+    background: #d54831;
+    border: none;
     color: white;
-    font-size: 2px;
-    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 2em;
+    padding-left: 14%;
+    border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
 }
 
-.LandingForm .GetPsw {
-    width: 100%;
-    margin-top: 10px;
-    text-align: right;
+.form p a:first-child{
+    float: left;
+    margin-left: 16%;
+    color: #3A568A
+}
+.form p a:last-child{
+    float: right;
+    margin-right: -16%;
+    color: #a09696
+}
+.form p a:hover{
+    text-decoration: underline
 }
 
-.LandingForm .GetPsw a,
-.LandingForm .GetReg a,
-.LandingForm .OtherLogins a {
-    text-decoration: none;
-    font-size: 15px;
-    color: #888888;
+.other-login{
+    margin: 0px auto;
 }
-.LandingForm .GetPsw a,
-.LandingForm .GetReg a,
-.LandingForm .OtherLogins a :hover{
-    text-decoration: underline;
+.other-login .title  {
+    text-align: center;
 }
-    
-.LandingForm .GetReg {
-    margin-top: 25px;
-    margin-bottom: 58px;
-}
-
-.LandingForm .GetReg a {
-    font-size: 16px;
-    color: #365388;
-}
-
-.OtherLogins .OtherLogin {
-    width: 150px;
-    margin-top: 35px;
-    margin-left: 92px;
-    margin-bottom: 105px;
-}
-
-.OtherLogins .OtherLogin a {
+.other-login .title *{
     display: inline-block;
-    width: 35px;
-    height: 28px;
-    background-position: center;
-    background-size: 80%;
-    background-repeat: no-repeat;
+    
+}
+.other-login .title hr{
+    vertical-align: middle;
+    width: 24%;
+    border: 0.5px #a09696 solid;
+}
+.other-login .title span{
+    margin: 0 1%
 }
 
-.OtherLogins .OtherLogin .QQ {
-    background-image: url(../img/qq2.png);
-
+.other-login{
+    text-align: center
 }
-
-.OtherLogins .OtherLogin .wecat {
-    background-image: url(../img/微信.png)
-}
-
-.OtherLogins-tiele {
-    display: flex;
-}
-
-.OtherLogins-tiele .title_name {
-    padding: 0 20px;
-}
-
-.OtherLogins-tiele .line {
-    background: linear-gradient(transparent 49%,
-        #888888 49%,
-        #888888 50%,
-        transparent 51%);
-    flex: 1;
+.other-login a{
+    display: inline-block;
+    margin:4% 6%;
 }

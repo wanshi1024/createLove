@@ -5,52 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创爱残友-登录</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
     <script src="js/header.js"></script>
-    <div class="LoginBox">
-        <div class="LandingForm">
-            <h3>用户登陆</h3>
-            <form>
-                <input type="text" placeholder="请输入您的用户名">
-                <input type="password" placeholder="请输入您的输入密码">
-                <div class="FormValidate clearfix">
-                    <input type="text" class="left" placeholder="请输入验证码">
-                    <a class="left" href="#">看不清？</a>
-                    <div class="left">
-                        <img style="margin-top: 0" src="https://dummyimage.com/83x30/000/fff" alt="验证码">
-                    </div>
+    <div class="wrap">
+        <div class="login-box">
+            <header class="login-switch">
+                <span style="background: white;color: black">个人登录</span>
+                <span>企业登录</span>
+            </header>
+            <!-- 个人登录 -->
+            <div class="form person-login" style="display: block">
+                <input type="text" placeholder="请输入账号">
+                <input type="password" placeholder="请输入密码">
+                <div class="check-code">
+                    <input type="text" placeholder="输入验证码">
+                    <a href="#">看不清?</a>
+                    <img src="https://dummyimage.com/83x34/000/fff" alt="验证码">
                 </div>
-                <button>登陆</button>
-                <div class="GetPsw ">
-                    <a href="#">忘记密码</a>
-                </div>
-                <div class="GetReg">
+                <button>登录</button>
+                <p>
                     <a href="register.html">没有账号?注册一个</a>
-                </div>
-                <div class="OtherLogins">
-                    <h5 class="OtherLogins-tiele">
-                        <span class="line"></span>
-                        <a href="#" class="title_name">第三方登陆</a>
-                        <span class="line"></span>
-                    </h5>
-                    <div class="OtherLogin">
-                        <a href="#" class="QQ left "></a href="#">
-                        <a href="#" class="wecat  right"></a href="#">
+                    <a href="#">忘记密码</a>
+                </p>
+                <div class="other-login">
+                    <div class="title">
+                        <hr>
+                        <span>第三方登录</span>
+                        <hr>
                     </div>
+                    <a href="#"><img src="img/微信.png" alt="" width="30"></a>
+                    <a href="#"><img src="img/qq2.png" alt="" width="30"></a>
                 </div>
+            </div>
 
-            </form>
+            <!-- 企业登录 -->
+            <div class="form enterprise-login" style="display: none">
+                <input type="text" placeholder="请输入企业账号">
+                <input type="password" placeholder="请输入密码">
+                <div class="check-code">
+                    <input type="text" placeholder="输入验证码">
+                    <a href="#">看不清?</a>
+                    <img src="https://dummyimage.com/83x34/000/fff" alt="验证码">
+                </div>
+                <button>登录</button>
+                <p>
+                    <a href="register.html">没有账号?注册一个</a>
+                    <a href="#">忘记密码</a>
+                </p>
+                <div class="other-login">
+                    <div class="title">
+                        <hr>
+                        <span>第三方登录</span>
+                        <hr>
+                    </div>
+                    <a href="#"><img src="img/微信.png" alt="" width="30"></a>
+                    <!-- <a href="#"><img src="img/qq2.png" alt="" width="30"></a> -->
+                </div>
+            </div>
+
         </div>
-
     </div>
+
     <script src="js/footer.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $('.login-switch span').click(function(){
+            var index =$(this).index()
+            // 个人登录
+            if(index==0){
+                $(this).css({"background": "white","color": "black"}).siblings().css({"background": "#ddd","color": "white"})
+                $('.person-login').css('display','block')
+                $('.enterprise-login').css('display','none')
+                // $('.form').eq(0).show().eq(1).hide()
+            }else if(index==1){
+                $(this).css({"background": "white","color": "black"}).siblings().css({"background": "#ddd","color": "white"})
+                $('.person-login').css('display','none')
+                $('.enterprise-login').css('display','block')
+                // $('.form').eq(1).show().eq(0).hide()
+            }
+
+        })
+        // $('person-login').css('display','none')
+
+    </script>
 </body>
 
 </html>
