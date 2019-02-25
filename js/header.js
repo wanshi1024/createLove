@@ -1,6 +1,12 @@
 document.writeln("<header>");
 document.writeln("		<div class=\'header_top\'>");
 document.writeln("			<div class=\'header_top_link\'>");
+document.writeln("				<div class=\'header_top_link_left\'>");
+document.writeln("					<span>");
+document.writeln("						<iframe width=\'400\' scrolling=\'no\' height=\'16\' frameborder=\'0\' allowtransparency=\'true\' ");
+document.writeln("						src=\'//i.tianqi.com/index.php?c=code&id=11&color=%23FFFFFF&icon=2&site=14\'></iframe>");
+document.writeln("					</span>");
+document.writeln("				</div>");
 document.writeln("				<div class=\'header_top_link_right\'>");
 document.writeln("					<a href=\'login.html\'>用户登录</a><span>|</span>");
 document.writeln("					<a href=\'register.html\'>新用户注册</a>");
