@@ -1,0 +1,106 @@
+body {
+    background: #F1F1F1
+}
+
+.wrap {
+
+    width: 1400px;
+    height: 1000px;
+    margin: 10px auto;
+}
+
+.list-bar1 {
+    width: 1400px;
+    height: 45px;
+    line-height: 45px;
+    text-align: left;
+    background: white;
+    color: #727272;
+    text-indent: 13px;
+}
+
+.orange {
+    color: #db6959;
+}
+
+.news-msg {
+    width: 100%;
+    height: 800px;
+    margin-top: 10px;
+    padding-left: 88px;
+}
+
+.news-msg .box {
+    width: 352px;
+    height: 400px;
+    display: inline-block;
+    background: white;
+    margin: 16px;
+}
+
+.caption {
+    width: 310px;
+    margin: 0 auto
+}
+
+.caption h3,
+p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.caption h3 {
+    font-weight: normal;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.caption p {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+/* 分页 */
+.list-page {
+    width: 605px;
+    margin: 100px auto;
+}
+
+.list-page ul {
+    display: flex;
+}
+
+.list-page ul li {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-left: 16px;
+    cursor: pointer;
+    /* border: 1px #727272  solid; */
+    background: white;
+
+}
+
+.list-page ul li:first-child,
+.list-page ul li:last-child {
+    width: 80px;
+}
+
+.list-page ul li a {
+    color: black;
+}
+
+.list-page .bg-red {
+    background-color: #e6631d;
+    color: white;
+}

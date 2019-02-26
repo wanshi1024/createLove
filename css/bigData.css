@@ -239,12 +239,7 @@ ul {
 /* 分页 */
 .list-page {
     width: 605px;
-    /* margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 25px; */
     margin: 40px auto;
-    /* border: 1px red solid; */
-
 }
 
 .list-page ul {
@@ -337,7 +332,8 @@ ul {
     /* font-weight: 200; */
     color: #313131
 }
-.find-job-description p{
+
+.find-job-description p {
     line-height: 1.8em;
     color: #767676
 }
