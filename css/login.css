@@ -1,5 +1,6 @@
 .wrap {
     width: 1600px;
+    background: url(../img/login-bg.jpg);
 }
 
 .login-box {
