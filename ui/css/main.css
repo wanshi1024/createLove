@@ -278,16 +278,9 @@
 			.xuanfu_fuhao {
 				float: right;
 				height: 40px;
-				line-height: 40px
-			}
-
-			.xuanfu_fuhao a:hover {
-				text-decoration: underline;
-				color: orangered;
-			}
-
-			.xuanfu_fuhao a img {
-				height: 10px;
+				line-height: 40px;
+				margin-right: 2%;
+				
 			}
 
 			.first_part {
@@ -503,7 +496,8 @@
 				float: left;
 				margin: 0 10px;
 			}
-
+			
+			
 			.qiuzhi_title_right_gengduo {
 				color: #E6631D;
 			}
@@ -595,7 +589,7 @@
 				margin: 0;
 				padding: 0;
 				font-size: 17px;
-				font-weight: 600;
+				font-weight: 400;
 			}
 
 			.youxiuqiyejia_main_wz p {
@@ -684,6 +678,7 @@
 				padding: 0;
 				line-height: 30px;
 				font-size: 18px;
+				font-weight: 500;
 			}
 
 			.duanxingwen_left {
@@ -696,7 +691,7 @@
 
 			.xingwen_wz p,
 			.duanxingwen p {
-				font-size: 16px;
+				font-size: 14px;
 				line-height: 30px;
 			}
 
@@ -954,4 +949,12 @@
 			.duanxingwen:hover,
 			.duankejixingwen a:hover {
 				color: #D2462F;
+			}
+
+			/* 更多信息的颜色 */
+			.gengduo_msg{
+				color: #5B83DD;
+			}
+			.gengduo_msg:hover{
+				color: orangered;
 			}

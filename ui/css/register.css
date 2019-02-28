@@ -1,5 +1,5 @@
 body {
-    background: inherit
+    background: white
 }
 
 ul {
@@ -52,21 +52,24 @@ ul {
 
 /* 个人注册 */
 .person-register {
-    width: 330px;
+    width: 400px;
     height: 440px;
     margin: 30px auto;
+    text-align: center;
+    border: 1px #F1F1F1 solid
 }
 
 .person-register input,
 .person-register button,
 .check-code {
-    width: inherit;
+    width: 330px;
     height: 48px;
 }
-
+.check-code{
+    margin-left: 2%
+}
 .check-code a {
     display: inline-block;
-    /* color: blue; */
     text-decoration: underline;
 }
 
@@ -237,12 +240,9 @@ ul {
 /* 企业注册输入区第二步 */
 .second-step {
     width: 800px;
-    /* height: 600px; */
     margin: 50px auto;
-    /* border: 1px red solid; */
     font-size: 14px;
     font-family: '微软雅黑';
-    /* font-weight: bold; */
     color: #808181;
     text-align: left;
 }
@@ -313,31 +313,6 @@ ul {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
-
-
-/* .second-step div>div {
-    margin-top: 14px;
-}
-
-.second-step input,
-.second-step button {
-    width: 320px;
-    height: 30px;
-    border: none;
-    border: 1px #EDEDED solid;
-
-}
-
-.second-step textarea {
-    resize: none;
-}
-
-.second-step button {
-    margin-left: 18%;
-    background: #F99507;
-    color: white;
-} */
-
 
 /* 企业注册输入区第三步 */
 .third-step {

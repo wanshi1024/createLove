@@ -5,15 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="ui/img/favicon.ico" />
     <title>创爱残友-登录</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="ui/css/main.css">
+    <link rel="stylesheet" href="ui/css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <style>
+        .checkCode-countDown{
+            width: 40px;
+            height: 30px;
+            position: absolute;
+            top: 46%;
+            left: 91.5%;
+            cursor: pointer;
+            border: 1px #F1F1F1 solid;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- <script src="js/header.js"></script> -->
+<body>  
     <header>
         <div class="header_top">
             <div class="header_top_link">
@@ -33,7 +46,7 @@
         <div class="header_bottom">
             <div class="header_bottom_link">
                 <div class="header_bottom_link_left">
-                    <a href="index.html"><img src="img/logo001.png" /></a>
+                    <a href="index.html"><img src="ui/img/logo001.png" /></a>
                 </div>
                 <div class="header_bottom_link_right">
                     <div class="daohan">
@@ -72,19 +85,19 @@
                     </div>
                     <div class="header_bottom_link_right_bottom">
                         <div class="erweima">
-                            <img src="img/icon003.png" />
+                            <img src="ui/img/icon003.png" />
                             <div class="erweima_wz">
                                 <p>残友飘飘过</p>
                                 <p>微信公众号</p>
                                 <div class="erweima_yc">
-                                    <img src="img/img015.jpg" />
+                                    <img src="ui/img/img015.jpg" />
                                     <p>微信扫一扫</p>
                                 </div>
                             </div>
                         </div>
                         <div class="sousuo">
                             <input type="text" name="" id="" value="" placeholder="请输入需要搜索的内容" />
-                            <img src="img/icon002.png" />
+                            <img src="ui/img/icon002.png" />
                         </div>
                     </div>
                 </div>
@@ -110,7 +123,7 @@
                 <button>登录</button>
                 <p>
                     <a href="register.html">没有账号?注册一个</a>
-                    <a href="#">忘记密码</a>
+                    <a href="javascript:void(0)" onclick="editPassword()">忘记密码</a>
                 </p>
                 <div class="other-login">
                     <div class="title">
@@ -118,8 +131,8 @@
                         <span>第三方登录</span>
                         <hr>
                     </div>
-                    <a href="#"><img src="img/微信.png" alt="" width="30"></a>
-                    <!-- <a href="#"><img src="img/qq2.png" alt="" width="30"></a> -->
+                    <a href="#"><img src="ui/img/微信.png" alt="" width="30"></a>
+                    <!-- <a href="#"><img src="ui/img/qq2.png" alt="" width="30"></a> -->
                 </div>
             </div>
 
@@ -143,20 +156,142 @@
                         <span>第三方登录</span>
                         <hr>
                     </div>
-                    <a href="#"><img src="img/微信.png" alt="" width="30"></a>
-                    <!-- <a href="#"><img src="img/qq2.png" alt="" width="30"></a> -->
+                    <a href="#"><img src="ui/img/微信.png" alt="" width="30"></a>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <!-- 修改密码弹窗 -->
+    <div class="modal fade" id="updatePassword" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="width: 500px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">密码找回</h4>
+                </div>
+                <div class="modal-body">
+                    <form name="editForm">
+                        <div class="form-group">
+                            <label for="recipient-name">请输入邮箱：</label>
+                            <input type='password' id="oldpassword" class="form-control" name="oldpassword" required
+                                placeholder="邮箱">
+                            <div style="display: inline" id="tip1"></div>
+                        </div>
+                        <div class="form-group" style="position: relative;">
+                            <label for="recipient-name">请输入验证码：</label>
+                            <input type='password' id="oldpassword" class="form-control" name="oldpassword" required
+                                placeholder="验证码">
+                            <!-- 验证码倒计时 -->
+                            <span class="checkCode-countDown">60s</span>
+                            <div style="display: inline" id="tip1"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text">请输入新密码:</label>
+                            <input type='password' id="password1" name="password1" class="form-control" required
+                                placeholder="输入新密码">
+                            <div style="display: inline" id="tip2"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text">请再次输入:</label>
+                            <input type='password' id="password2" name="password2" class="form-control" required
+                                placeholder="重新输入密码">
+                            <div style="display: inline" id="tip3"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="submitPassword()" class="btn btn-primary" ng-disabled="editForm.$invalid">确定修改</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script>
+        //忘记密码模态框js
+        var editPassword = function () {
+            $("#password1").blur(function () {
+                var num = $("#password1").val().length;
+                if (num < 6) {
+                    $("#tip2").html("<font color=\"red\" size=\"2\">  太短了</font>");
+                } else if (num > 18) {
+                    $("#tip2").html("<font color=\"red\" size=\"2\">  太长了</font>");
+                } else {
+                    $("#tip2").html("<font color=\"green\" size=\"2\"> OK</font>");
+                }
+            });
+
+            $("#password2").blur(function () {
+                var tmp = $("#password1").val();
+                var num = $("#password2").val().length;
+                if ($("#password2").val() != tmp) {
+                    $("#tip3").html("<font color=\"red\" size=\"2\">  和第一次输入不同</font>");
+                } else {
+                    if (num >= 6 && num <= 18) {
+                        $("#tip3").html("<font color=\"green\" size=\"2\">  OK</font>");
+                    } else {
+                        $("#tip3").html("<font color=\"red\" size=\"2\">  太短或太长</font>");
+                    }
+                }
+            });
+
+            $("#updatePassword").modal();
+        }
+        var submitPassword = function () {
+            var flag = true;
+            var old = $("#oldpassword").val();
+            var pass = $("#password1").val();
+            var pass2 = $("#password2").val();
+            var num1 = $("#password1").val().length;
+            var num2 = $("#password2").val().length;
+            if (num1 != num2 || num1 < 6 || num2 < 6 || num1 > 18 || num2 > 18 || pass != pass2) {
+                flag = false;
+            } else {
+                flag = true;
+            }
+            if (flag) {
+                $.ajax({
+                    type: 'POST',
+                    url: '' + $SDC.apiDomain + '/manage/meta/user/updatepassword',
+                    data: {
+                        oldPassword: old,
+                        newPassword: pass
+                    },
+                    success: function (e) {
+                        if (e.code == 0) {
+                            alert("修改成功");
+                            $("#updatePassword").modal('hide');
+                            $("#oldpassword").val("");
+                            $("#password1").val("");
+                            $("#password2").val("");
+                            $("#tip1").empty();
+                            $("#tip2").empty();
+                            $("#tip3").empty();
+                        } else {
+                            alert("修改失败");
+                        }
+                    }
+                });
+            } else {
+                alert("请输入正确数据");
+            }
+        }
+    </script>
+
+    <!-- 底部授权部分 -->
     <footer>
-		<p>版权所有 Copyright 广东创爱残友&nbsp;&nbsp;创爱残友网粤ICP备18094573号&nbsp;&nbsp;&nbsp;地址:广东省东莞市残疾人就业创业培训园&nbsp;&nbsp;&nbsp;&nbsp;邮编:523000
-		</p >
-		<p>电话:0769-33819516&nbsp;&nbsp;&nbsp;&nbsp;网站管理及技术支持:广东创爱残友自媒体工作室</p >
-	</footer>
-    <!-- <script src="js/footer.js"></script> -->
-    <script src="js/jquery.min.js"></script>
+        <p>版权所有 Copyright
+            广东创爱残友&nbsp;&nbsp;创爱残友网粤ICP备18094573号&nbsp;&nbsp;&nbsp;地址:广东省东莞市残疾人就业创业培训园&nbsp;&nbsp;&nbsp;&nbsp;邮编:523000
+        </p>
+        <p>电话:0769-33819516&nbsp;&nbsp;&nbsp;&nbsp;网站管理及技术支持:广东创爱残友自媒体工作室</p>
+    </footer>
+
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script> -->
     <script>
         $('.login-switch span').click(function () {
             var index = $(this).index()
@@ -171,7 +306,6 @@
                 })
                 $('.person-login').css('display', 'block')
                 $('.enterprise-login').css('display', 'none')
-                // $('.form').eq(0).show().eq(1).hide()
             } else if (index == 1) {
                 $(this).css({
                     "background": "white",
@@ -182,11 +316,9 @@
                 })
                 $('.person-login').css('display', 'none')
                 $('.enterprise-login').css('display', 'block')
-                // $('.form').eq(1).show().eq(0).hide()
             }
 
         })
-        // $('person-login').css('display','none')
     </script>
 </body>
 

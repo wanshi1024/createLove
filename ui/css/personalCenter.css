@@ -12,17 +12,14 @@
     background: white;
 }
 .personal-wrap .right{
-    /* display: inline-block; */
     float: right;
     width: 28%;
     height: 600px;
     background: white;
-    /* text-align: center; */
 }
 .right .top{
     width: 100px;
     height: 130px;
-    /* border: 1px red solid; */
     margin: 20px auto;
     text-align: center;
 }
@@ -34,13 +31,10 @@
     -o-border-radius: 50%;
     border: 1px #BAB4B7 solid;
 }
-.right .top .user-name{
-    
-}
+
 .middle{
     width: 100%;
     height: 100px;
-    /* background: #BAB4B7 */
     border-bottom: 0.5px #F1F1F1 solid;
 }
 .middle> div{
@@ -62,8 +56,6 @@
 }
 .middle .icon img{
     margin-top: 8%;
-    /* border-radius: 50%; */
-    
 }
 .middle .tip{
     display: inline-block;
