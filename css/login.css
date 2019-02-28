@@ -1,13 +1,18 @@
 .wrap {
-    width: 1600px;
-    background: url(../img/login-bg.jpg);
+    width: 1920px;
+    height: 840px;
+    margin: 0 auto;
+    background: url(../img/login-bg.jpg) ;
+    background-size: 100% auto;
+    background-position: 10% 10%;
+    padding-top: 5%
 }
 
 .login-box {
     width: 330px;
     height: 480px;
-    margin-left: 75%;
-    margin-top: 2%;
+    margin-left: 68%;
+    margin-top: 0%;
     background: white;
 }
 
