@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        form{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .row{
+        width: 100%;
+        margin: 0px auto;
+        vertical-align: middle;
+        position: relative;
+    }
+    .row> * {
+        display: inline-block;
+    }
+    label{
+        width: 70px;
+        text-align: right;
+        padding-right: 4px;
+    }
+    input[type=text],input[type=password]{
+        border: 1px #e6e6e6 solid;
+        height: 40px;
+        width: 300px;
+        margin: 10px auto;
+        padding-left: 1em;
+    }
+    input[type=submit]{
+        width: 100px;
+        height: 40px;
+        border: none;
+        background: #E6631D;
+        color: white;
+        font-size: 15px;
+        margin: 15px auto;
+        cursor: pointer;
+    }
+
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <div class="row">
+            <label>账号:</label>
+            <input type="text" class="ipt" name="user" readonly  placeholder="请输入账号"/>
+        </div>
+
+        <div class="row">
+            <label>旧密码:</label>
+            <input type="password" class="ipt" name="old_pswd" placeholder="请输旧密码" />
+        </div>
+
+        <div class="row">
+            <label>新密码:</label>
+            <input type="password" class="ipt" name="newPswd" placeholder="请输入新密码" />
+        </div>
+
+        <div class="row">
+            <label>确认密码:</label>
+            <input type="password" class="ipt code" name="newPswd_" placeholder="请再次输入新密码" />
+        </div>
+        <div class="row">
+            <input type="submit" value="确认修改" class="btn" />
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form action="#">
+        <div>
+            <label for="">用户账号</label>
+            <input type="text" placeholder="用户名">
+        </div>
+        <div>
+            <label for="">残疾证号</label>
+            <input type="text" placeholder="残疾证号">
+        </div>
+        <div>
+            <div class="select">
+                <div>
+                    <label for="">残疾等级</label>
+                    <select name="" id="">
+                        <option value="">一级残疾</option>
+                        <option value="">二级残疾</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="">残疾类型</label>
+                    <select name="" id="">
+                        <option value="">肢体残疾</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="photo">
+            <label for="">残疾证正面</label>
+            <input type="file" name="idcardZ" onchange="onchangeImg(this);" style="display: none" accept="image/jpeg, image/png, image/jpg">
+            <img src="https://dummyimage.com/360x200/ddd" width="360" height="200" style="cursor: pointer;border: 0.5px #e6e6e6 solid;">
+            <img src="身份证正面.png" onclick="$(this).prev().prev().trigger('click')" class="onSubForm" width="150">
+        </div>
+
+
+        <div class="photo">
+            <label for="">残疾证反面</label>
+            <input type="file" name="idcardF" onchange="onchangeImg(this)" style="display: none" accept="image/jpeg, image/png, image/jpg">
+            <img src="https://dummyimage.com/360x200/ddd" width="360" height="200" style="cursor: pointer;border: 0.5px #e6e6e6 solid;">
+            <img src="身份证反面.png" onclick="$(this).prev().prev().trigger('click')" class="onSubForm" width="150">
+        </div>
+        <div>
+            <input type="submit" value="确认提交">
+        </div>
+
+    </form>
+
+
+
+
+</body>
+
+</html>

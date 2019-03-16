@@ -1,0 +1,64 @@
+
+body{
+    font-family: "Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+form{
+    width: 600px;
+    margin: 20px auto;
+    border: 1px rgb(163, 160, 160) solid;
+    padding-top: 20px;
+}
+form>div{
+    width: 500px;
+    margin: 10px auto;
+    
+}
+
+
+form input,select{
+    width: 360px;
+    height: 40px;
+    margin-left: 14px;
+    padding-left: 10px;
+    border: 0.5px #ddd solid;
+    font-size: 14px;
+}
+::placeholder{
+    font-size: 14px;
+}
+form label{
+   font-size: 15px;
+}
+
+.select select{
+    width: 120px;
+}
+
+.select>div{
+    display: inline-block;
+}
+.select>div:last-child{
+    margin-left: 48px;
+}
+.photo{
+    height: 200px;
+    position: relative;
+}
+.photo img:last-child{
+    position: absolute;
+    top: 12%;
+    left: 40%;
+    cursor: pointer;
+}
+.photo label{
+    vertical-align: text-top;
+}
+
+form input[type=submit]{
+    /* outline: none; */
+    background: #E6631D;
+    color: white;
+    margin: 20px auto;
+    margin-left: 16%;
+}

@@ -8,13 +8,18 @@
     <link rel="icon" type="image/x-icon" href="../../ui/img/favicon.ico" />
     <title>创残残友-个人中心</title>
     <link rel="stylesheet" href="../../ui/css/main.css">
-    <link rel="stylesheet" href="../../ui/css/bigData.css">
     <link rel="stylesheet" href="../../ui/css/personalCenter.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="../../ui/js/validate-1.4/jquery.validate.js"></script>
+    <script src="../../ui/js/validate-1.4/validate-methods.js"></script>
+    <script src="../../ui/js/validate-1.4/messages_zh.js"></script>
+
 </head>
 
 <body>
-    
-
     <header>
         <div class="header_top">
             <div class="header_top_link">
@@ -105,30 +110,109 @@
         </div>
 
         <div class="personal-wrap">
-            <div class="content">
-                个人中心内容
+            <div class="left-content">
+                <form action="#" id="user-form" enctype="multipart/form-data" autocomplete="off">
+                    <div>
+                        <div class="label_form">
+                            <label for="">登录账号</label>
+                            <input type="text" name="" id="" placeholder="登录账号" required minlength="5">
+                            <!--  -->
+                        </div>
+                        <div class="label_form">
+                            <label for="">真实姓名</label>
+                            <input type="text" name="" id="" placeholder="真实姓名" required minlength="5">
+
+                        </div>
+                        <div class="label_form">
+                            <label for="">你的年龄</label>
+                            <input type="number" name="" id="" placeholder="年龄" required minlength="16" maxlength="80">
+
+                        </div>
+                        <div class="label_form">
+                            <label for="">手机号码</label>
+                            <input type="tel" name="" id="" placeholder="手机号" required>
+
+                        </div>
+                        <div class="label_form">
+                            <label for="">个人邮箱</label>
+                            <input type="email" name="" id="" placeholder="邮箱" required>
+
+                        </div>
+                        <div class="label_form">
+                            <label for="">个人备注</label>
+                            <textarea name="" id="" cols="30" rows="5"></textarea>
+
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="label_form">
+                            <label for="">支付宝号</label>
+                            <input type="text" name="" id="" placeholder="支付宝" required>
+
+                        </div>
+                        <div class="label_form">
+                            <label for="">个人微信</label>
+                            <input type="text" name="" id="" placeholder="微信" required>
+
+                        </div>
+                        <div class="label_form radio" id="state-radio">
+                            <label for="">账号状态</label>
+                            <input type="radio" name="state" id="normal" checked><label for="normal" class="radio-txt">正常</label>
+                            <input type="radio" name="state" id="abnormal"><label for="abnormal" class="radio-txt">异常</label>
+                        </div>
+                        <div class="label_form radio">
+                            <label for="">个人性别</label>
+                            <input type="radio" name="sex" id="man" checked><label for="man" class="radio-txt">男</label>
+                            <input type="radio" name="sex" id="woman"><label for="woman" class="radio-txt">女</label>
+                        </div>
+
+                        <div class="label_form">
+                            <label for="">所在地区</label>
+                            <select name="" id="" class="address" required>
+                                <option value="XXX">安徽省</option>
+                                <option value="XXX">安庆市</option>
+                                <option value="XXX">宿松县</option>
+                            </select>
+                            <select name="" id="" class="address" required>
+                                <option value="XXX">安徽省</option>
+                                <option value="XXX">安庆市</option>
+                                <option value="XXX">宿松县</option>
+                            </select>
+
+                        </div>
+                        <div class="label_form">
+                            <label for="">详细地址</label>
+                            <input type="text" placeholder="详细地址">
+
+                        </div>
+                    </div>
+                    <button>提交</button>
+                </form>
             </div>
             <div class="right">
                 <div class="top">
                     <img src="../../ui/img/rabbit-ws.png" alt="" width="100" height="100">
                     <span class="user-name">刘玉峰</span>
+                    <span class="update-head-photo">修改头像</span>
                 </div>
                 <div class="middle">
                     <div>
-                        <div class="icon">
+                        <div class="icon my-message">
                             <img src="../../ui/img/my-message.png" width="40" height="40" alt="">
+                            <b class="msg-count">2</b>
                         </div>
                         <span class="tip">我的消息</span>
                     </div>
-                    <div>
+                    <div id="emailCheck">
                         <div class="icon">
-                            <img src="../../ui/img/phone-checked.png" width="30" height="30" alt="" style="margin-top: 10px">
+                            <img src="../../ui/img/邮箱认证.png" width="30" height="30" alt="" style="margin-top: 10px">
                         </div>
-                        <span class="tip">手机认证</span>
+                        <span class="tip">邮箱认证</span>
                     </div>
                     <div>
                         <div class="icon">
-                            <img src="../../ui/img/残疾人证.png" width="30" height="30" alt="" style="margin-top: 10px">
+                            <img src="../../ui/img/残疾证.png" width="30" height="30" alt="" style="margin-top: 10px">
                         </div>
                         <span class="tip">残疾人证</span>
                     </div>
@@ -139,15 +223,98 @@
                 <div class="doWork-center">
                     我的创业中心
                 </div>
+                <div class="company-center">
+                    我的企业中心
+                </div>
                 <button>退出登录</button>
             </div>
         </div>
     </div>
     <footer>
-		<p>版权所有 Copyright 广东创爱残友&nbsp;&nbsp;创爱残友网粤ICP备18094573号&nbsp;&nbsp;&nbsp;地址:广东省东莞市残疾人就业创业培训园&nbsp;&nbsp;&nbsp;&nbsp;邮编:523000
-		</p >
-		<p>电话:0769-33819516&nbsp;&nbsp;&nbsp;&nbsp;网站管理及技术支持:广东创爱残友自媒体工作室</p >
-	</footer>
+        <p>版权所有 Copyright
+            广东创爱残友&nbsp;&nbsp;创爱残友网粤ICP备18094573号&nbsp;&nbsp;&nbsp;地址:广东省东莞市残疾人就业创业培训园&nbsp;&nbsp;&nbsp;&nbsp;邮编:523000
+        </p>
+        <p>电话:0769-33819516&nbsp;&nbsp;&nbsp;&nbsp;网站管理及技术支持:广东创爱残友自媒体工作室</p>
+    </footer>
+
+    <!-- 邮箱认证弹窗 -->
+    <form action="" id="emailCheck_form" style="display: none">
+        <span>&times;</span>
+        <div class="row">
+            <input type="text" class="ipt" name="user" placeholder="请输入账号" required />
+        </div>
+
+        <div class="row">
+            <input type="text" class="ipt" name="email" placeholder="请输入邮箱" required />
+        </div>
+
+        <div class="row">
+            <input type="text" class="ipt code" name="checkCode" placeholder="请输入邮箱验证码" required />
+            <button class="getCode_btn">60s</button>
+        </div>
+        <div class="row">
+            <input type="submit" value="认证完成" class="btn" />
+        </div>
+    </form>
+    <!-- 修改头像弹窗 -->
+    <!-- <div id="update-headPhoto-window" style="display: none">
+        <div>
+            <label for="">图片地址</label>
+            <input type="text" placeholder="请上传营业执照" required readonly>
+            <input type="button" value="选择文件" class="checkCode" onclick="$(this).next().trigger('click')">
+            <input type="file" style="display: none" accept="image/*" onchange="$(this).prev().prev().val($(this).val())">
+        </div>
+        <img src="https://dummyimage.com/400x400/000/ddd" alt="" width="400">
+    </div> -->
+    <div id="update-headPhoto-window" style="display:none">
+            <div>
+                <input type="text" placeholder="请选择图片文件" value="${user.headPath}" readonly style="width: 200px;">
+                <input type="button" value="选择文件" class="checkCode" onclick="$(this).next().next().trigger('click')" style="background-color: #f37b1d5c">
+                <input type="button" value="上传图片" class="checkCode" onclick="alert(000)" style="background-color: #5eb95e6e; margin-left: 15px;">
+                <input type="file" style="display: none" accept="image/*" onchange="onchangeImg()">
+            </div>
+            <img id="showImg" width="300" height="300">
+        </div>
+    <script>
+         function onchangeImg(obj) {
+            $("input[type='text']").val($("input[type='file']").val())
+            $("#update-headPhoto-window img").attr('src', window.URL.createObjectURL($("input[type='file']")[0].files[0]));
+        }
+        $("#emailCheck_form").validate({
+            errorPlacement: function (error, element) {
+                element.parent().append(error)
+            }
+        })
+        $("#user-form").validate({
+            errorPlacement: function (error, element) {
+                element.parent().append(error)
+            }
+        })
+
+        // 弹窗显示
+        $('#emailCheck').click(function () {
+            $("#emailCheck_form").css('display', 'block');
+
+        })
+        // 弹窗关闭
+        $('#emailCheck_form span').click(function () {
+            $("#emailCheck_form").css('display', 'none')
+        })
+
+
+        // 修改头像 鼠标移入头像显示文字
+        $('.right .top img').mouseover(function () {
+            $('.right .top .update-head-photo ').css('visibility', 'visible')
+        })
+
+        $('.right .top .update-head-photo ').mouseleave(function () {
+            $(this).css('visibility', 'hidden')
+        }).click(function () { //点击修改头像文字弹窗显示
+            alert(1)
+        })
+
+       
+    </script>
 </body>
 
 </html>

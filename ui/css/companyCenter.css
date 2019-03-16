@@ -1,0 +1,372 @@
+.personal-wrap {
+    width: 1400px;
+    height: 1000px;
+    display: block;
+}
+
+.personal-wrap .content {
+    display: inline-block;
+    width: 70%;
+    height: inherit;
+    background: white;
+}
+
+.personal-wrap .right {
+    float: right;
+    width: 28%;
+    height: 600px;
+    background: white;
+}
+
+.right .top {
+    width: 100px;
+    height: 130px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.right .top img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px #BAB4B7 solid;
+}
+
+.middle {
+    width: 100%;
+    height: 100px;
+    border-bottom: 0.5px #F1F1F1 solid;
+}
+
+.middle>div {
+    display: inline-block;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.middle .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #F1F1F1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.middle .icon img {
+    margin-top: 8%;
+}
+
+.middle .tip {
+    display: inline-block;
+    font-size: 12px;
+    color: #A2A2A2;
+    margin-top: 2%;
+}
+
+.findJob-center,
+.doWork-center,
+.person-center {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 0.5px #F1F1F1 solid;
+}
+.findJob-center:hover,
+.doWork-center:hover,
+.person-center:hover {
+    background: rgb(245, 238, 238);
+    cursor: pointer;
+}
+.right button {
+    width: 150px;
+    height: 50px;
+    background: #F99507;
+    color: white;
+    border: none;
+    margin-top: 10%;
+    margin-left: 30%;
+    font-size: 16px;
+}
+
+
+.col-contribution {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.col-contribution .contribution-list {
+    width: 100%;
+    margin: 10px auto;
+
+
+}
+
+/* 公用样式 */
+.clearfix::after {
+    content: "";
+    clear: both;
+    overflow: hidden;
+    display: block;
+    height: 0;
+}
+
+.clerafix {
+    zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: #727272;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.orange {
+    color: #db6959;
+}
+
+.bg-orange {
+    background-color: #f99507;
+    color: white;
+}
+
+/* 头部信息分页 */
+.contribution-list .list-bar {
+    width: 100%;
+    padding: 13px;
+    box-sizing: border-box;
+    margin: 16px 0;
+    background: white;
+}
+
+
+form input {
+    width: 260px;
+    margin-left: 4px;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+/* 表单边框变圆 */
+#emailCheck_form input,
+#emailCheck_form button {
+    border: 1px #e6e6e6 solid;
+    height: 45px;
+    margin: 20px auto;
+}
+
+#emailCheck_form {
+    width: 300px;
+    height: 400px;
+    border: 1px rgb(173, 167, 167) solid;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+#emailCheck_form span {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#emailCheck_form .row {
+    position: relative;
+}
+
+#emailCheck_form input[type=text] {
+    padding-left: 10px;
+}
+
+#emailCheck_form .btn {
+    background: orangered;
+    color: white;
+}
+
+#emailCheck_form .getCode_btn {
+    width: 45px;
+    height: 47px;
+    position: absolute;
+    top: 1px;
+    right: 14px;
+}
+
+
+
+/* 验证内容提示 */
+label.error {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    color: #ef392b;
+    font-size: 12px;
+}
+
+form input,select,textarea {
+    width: 260px;
+    margin-left: 4px;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+/* 表单边框变圆 */
+form input, form button,form select{
+    border: 1px #e6e6e6 solid;
+    height: 45px;
+}
+form textarea, form select{
+    border: 1px #e6e6e6 solid;
+}
+.label_form{
+    width: 330px;
+    margin:25px auto;
+    vertical-align: middle;
+    position: relative;
+}
+/*验证码按钮*/
+.checkCode{
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    background: #d0d0d063;
+    top: 10px;
+    right: 25px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    vertical-align: baseline;
+    border: 1px #a9a9a97a solid;
+}
+
+
+
+/* 改动css */
+#user-form {
+    width: 980px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#user-form>div {
+    width: 490px;
+    height: 500px;
+}
+#user-form textarea{
+    resize: none;
+    overflow-y: auto;
+}
+.label_form> *{
+    display: inline-block;
+}
+.label_form img{
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: -20px;
+}
+.label_form .address{
+    width: 130px;
+    margin-left: 0;
+}
+/*提交按钮*/
+#user-form button {
+    width: 330px;
+    margin-top: 20px;
+    background: #F99507;
+    color: white;
+    font-size: 14px;
+    opacity: .7;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20%;
+    right: 32%;
+}
+
+/* 表单边框变圆 */
+#emailCheck_form input,
+#emailCheck_form button {
+    border: 1px #e6e6e6 solid;
+    height: 45px;
+    margin: 20px auto;
+}
+
+#emailCheck_form {
+    width: 300px;
+    height: 400px;
+    border: 1px rgb(173, 167, 167) solid;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+#emailCheck_form span {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#emailCheck_form .row {
+    position: relative;
+}
+
+#emailCheck_form input[type=text] {
+    padding-left: 10px;
+}
+
+#emailCheck_form .btn {
+    background: orangered;
+    color: white;
+}
+
+#emailCheck_form .getCode_btn {
+    width: 45px;
+    height: 47px;
+    position: absolute;
+    top: 1px;
+    right: 14px;
+}
+
+/* 验证内容提示 */
+label.error {
+    position: absolute;
+    right: 40px;
+    top: 38px;
+    color: #ef392b;
+    font-size: 12px;
+}

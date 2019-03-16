@@ -1,9 +1,9 @@
 ﻿			* {
-				font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+				font-family: "Arial", "Microsoft YaHei", "楷体", "宋体", sans-serif;
 			}
 
 			body {
-				width: 1920px;
+				/* width: 1920px; */
 				margin: 0;
 				background-color: #f1f1f1;
 				padding: 0;
@@ -55,12 +55,12 @@
 				margin: 0 auto;
 			}
 
-			@media screen and (min-width: 1921px) {
+			@media screen and (min-width: 1900px) {
 
 				.header_top,
 				.header_bottom,
 				footer {
-					width: 1920px;
+					width: 1900px;
 					margin: 0 auto;
 				}
 			}
@@ -90,6 +90,28 @@
 
 			.header_top_link_right {
 				float: right;
+				position: relative;
+			}
+
+			/* 下拉框 */
+			.header_top_link_right ul {
+				position: absolute;
+				top: 34px;
+				right: 140px;
+				cursor: pointer;
+				display: block;
+				background: #e6631d;
+				color: white;
+				font-size: 16px;
+				line-height: 36px;
+				padding-left: 10px;
+				padding-right: 10px;
+				opacity: .6;
+			}
+
+			.header_top_link_right ul li:hover {
+				color: whitesmoke;
+				font-weight: bold;
 			}
 
 			.header_top_link_left a,
@@ -280,7 +302,7 @@
 				height: 40px;
 				line-height: 40px;
 				margin-right: 2%;
-				
+
 			}
 
 			.first_part {
@@ -393,7 +415,7 @@
 
 			.smallicon {
 				height: 24px;
-				width: 10px;
+				width: 6px;
 			}
 
 			.qiuzhiicon,
@@ -430,7 +452,7 @@
 			}
 
 			.canlianzhixunicon {
-				background-color: #5e005e;
+				background-color: skyblue;
 			}
 
 			.chuanxingchuanyeicon {
@@ -446,39 +468,41 @@
 			}
 
 			.helpicon {
-				background-color: #ce0000;
+				background-color: rgb(255, 196, 0);
 			}
 
 			.kejiicon {
-				background-color: #000079;
+				background-color: #D54831;
 			}
 
 			.kangfuicon {
-				background-color: #79ff79;
+				background-color: #2855B1
 			}
 
 			.wenhuaicon {
-				background-color: #7e3d76;
+				background-color: #48A257
 			}
 
 			.frriendicon {
-				background-color: palevioletred;
+				background-color: #DBA008;
 			}
 
 			.qiuzhi_title_wz,
 			.youxiuqiyejia_title_wz,
 			.volunteer_title_wz {
 				line-height: 24px;
+				font-family: Monospace;
 				float: left;
 				color: #222222;
-				font-weight: bold;
+				font-size: 20px;
+				margin-left: 8px;
 			}
 
 			.qiuzhi_title_wz img,
 			.youxiuqiyejia_title_wz img,
 			.volunteer_title_wz img {
 				height: 24px;
-				vertical-align: middle;
+				vertical-align: top;
 				margin: 0 5px;
 			}
 
@@ -496,8 +520,8 @@
 				float: left;
 				margin: 0 10px;
 			}
-			
-			
+
+
 			.qiuzhi_title_right_gengduo {
 				color: #E6631D;
 			}
@@ -507,7 +531,6 @@
 			}
 
 			.qiuzhi_title_right img {
-				height: 24px;
 				margin: 0 5px;
 				vertical-align: middle;
 			}
@@ -590,11 +613,22 @@
 				padding: 0;
 				font-size: 17px;
 				font-weight: 400;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
 			}
 
 			.youxiuqiyejia_main_wz p {
 				font-size: 14px;
-				line-height: 20px;
+				line-height: 26px;
+				color: rgb(163, 162, 162);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
 			}
 
 			.volunteer_main a {
@@ -677,10 +711,18 @@
 				margin: 0;
 				padding: 0;
 				line-height: 30px;
-				font-size: 18px;
-				font-weight: 500;
+				font-size: 20px;
+				font-weight: bold;
 			}
-
+			.xingwen_wz p{
+				margin-top: 10px;
+				text-indent: 2em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 6;
+				-webkit-box-orient: vertical;
+			}
 			.duanxingwen_left {
 				float: left;
 			}
@@ -691,7 +733,7 @@
 
 			.xingwen_wz p,
 			.duanxingwen p {
-				font-size: 14px;
+				font-size: 15px;
 				line-height: 30px;
 			}
 
@@ -795,7 +837,7 @@
 			.help p {
 				padding: 0px 10px;
 				margin: 10px 0;
-				line-height: 30px;
+				line-height: 24px;
 				font-size: 15px;
 				text-overflow: ellipsis;
 				display: -webkit-box;
@@ -804,16 +846,23 @@
 				margin: 0px auto;
 				overflow: hidden;
 			}
-
+			.help_msg{
+				margin-top: 20px;
+			}
 			.help_msg p {
+				font-family: '黑体';
 				padding: 0px 10px;
 				line-height: 24px;
 				float: left;
 				margin-top: 4px;
 				font-size: 14px;
-				color: #656568
+				color: #929292;
+				
 			}
-
+			.help_msg p span{
+				font-family: '黑体';
+				margin-left: 10px;
+			}
 			.help_msg a {
 				margin: 0 15px;
 				float: right;
@@ -881,7 +930,7 @@
 
 			.kejixingwen_jidan p {
 				font-size: 14px;
-				line-height: 20px;
+				line-height: 26px;
 				color: #59595e;
 				text-overflow: ellipsis;
 				display: -webkit-box;
@@ -890,12 +939,21 @@
 				margin: 0px auto;
 				overflow: hidden;
 			}
-
+			.duankejixingwen {
+				margin-left: 20px;
+			}
 			.duankejixingwen a {
-				width: 440px;
+				font-size: 15px;
+				width: 400px;
 				margin: 10px;
 				height: 30px;
 				line-height: 30px;
+				color: rgb(134, 128, 128);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
 			}
 
 			.adv003 {
@@ -952,9 +1010,69 @@
 			}
 
 			/* 更多信息的颜色 */
-			.gengduo_msg{
+			.gengduo_msg {
 				color: #5B83DD;
+				vertical-align: text-bottom
 			}
-			.gengduo_msg:hover{
+
+			.gengduo_msg:hover {
 				color: orangered;
 			}
+
+			/*首页圆头像*/
+			.round_icon {
+				float: right;
+				width: 32px;
+				height: 32px;
+				display: flex;
+				border-radius: 50%;
+				overflow: hidden;
+				margin: 2px 0 0 5px
+			}
+
+			/* 下拉框 */
+			.header_top_link_right ul {
+				width: 120px;
+				position: absolute;
+				right: 60px;
+				cursor: pointer;
+				background: #55555555;
+				color: white;
+				font-size: 14px;
+				text-align: center;
+				margin-top: -36px;
+				z-index: 1;
+			}
+
+			.header_top_link_right ul li {
+				background: #e6631d;
+			}
+
+			.header_top_link_right ul li:hover {
+				background-color: #9a4319;
+			}
+
+
+			/* 细节优化 */
+			table thead {
+				font-weight: normal;
+
+			}
+			/* 共用css */
+			.sandian{
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+
+
+			.volunteer_title_right *{
+				font-size: 18px;
+			}
+			
+
+
+
+

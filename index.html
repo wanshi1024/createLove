@@ -5,13 +5,12 @@
 	<meta charset="utf-8" />
 	<title>创爱残友网</title>
 	<link rel="stylesheet" type="text/css" href="ui/css/main.css" />
+	<link rel="stylesheet" href="ui/css/swiper-3.4.2.min.css">
 	<link rel="icon" type="image/x-icon" href="ui/img/favicon.ico" />
 	<link rel="shortcut icon" type="image/x-icon" href="ui/img/favicon.ico" />
-	<script type="text/javascript" src="ui/ui/js/main.js"></script>
-	<link rel="stylesheet" href="ui/css/swiper-3.4.2.min.css">
+	<!-- <script src="ui/js/jquery.min.js"></script> -->
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 	<script src="ui/js/swiper-3.4.2.min.js"></script>
-	<script src="ui/js/jquery.min.js"></script>
-	
 </head>
 
 <body>
@@ -27,9 +26,37 @@
 					</span>
 				</div>
 				<div class="header_top_link_right">
-					<a href="./login.html">用户登录</a><span>|</span>
-					<a href="./register.html">新用户注册</a>
+					<a href="#">请登录<img src="http://www.baidu.com/img/bd_logo1.png?qua=high" class="round_icon"></a>
+					<!-- <img src="${user.headPath}" class="round_icon"> -->
+
+					<ul style="display: none">
+						<li style="margin-top: 36px;" onclick="">个人中心</li>
+						<li onclick="update_pswd()">修改密码</li>
+						<li onclick="">退出登录</li>
+					</ul>
+					</a><span>|</span>
+					<a href="">注册</a>
 				</div>
+				<!-- <div class="header_top_link_right">
+					<a href="./login.html">用户登录
+						<img src="http://www.baidu.com/img/bd_logo1.png?qua=high" width="32" height="32" class="round_icon">
+					</a>
+					<span>|</span>
+					<a href="./register.html">新用户注册</a>
+					<ul>
+						<li>修改密码</li>
+						<li>退出登录</li>
+					</ul>
+				</div>
+				<script>
+					$('.header_top_link_right ul').hide()
+					$('.header_top_link_right a').eq(0).mouseover(function(){
+						$('.header_top_link_right ul').stop().slideDown(500)
+					})
+					$('.header_top_link_right ul').mouseleave(function(){
+						$(this).stop().slideUp(500)
+					})
+				</script> -->
 			</div>
 		</div>
 		<div class="header_bottom">
@@ -113,12 +140,6 @@
 					<a href="#" title="gwy">2、国务院办公厅关于调整国务院残疾人工作委员会组成人员的通知</a>
 					<a href="#" title="gwycjr">3、国务院残疾人工作委员会召开第一次全体会议</a>
 					<a href="#" title="zgcl">4、中国残联党组召开专题扩大会议传达学习中央和中纪委领导同志有关讲话精神</a>
-					<a href="#" title="zhd1">5、张海迪会见国际残奧委会主席帕森</a>
-					<a href="#" title="zhd2">6、张海迪会见国际狮子会会长纳雷什</a>
-					<a href="#" title="zgclzk">7、中国残联召开贯彻落实《关于进一步激励广大干部时代新担当新作为的意见》座谈会</a>
-					<a href="#" title="zhd2">8、张海迪会见国际狮子会会长纳雷什</a>
-					<a href="#" title="zgclzk">9、中国残联召开贯彻落实《关于进一步激励广大干部时代新担当新作为的意见》座谈会</a>
-					<a href="#" title="zgclzk">10、中国残联召开贯彻落实《关于进一步激励广大干部时代新担当新作为的意见》座谈会</a>
 				</div>
 				<div class="first_part_right">
 					<a href="#"><img src="ui/img/img002.png" /></a>
@@ -129,43 +150,39 @@
 					<!-- swiper轮播 -->
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide"><a href="#"><img src="ui/img/lkq.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/gwy.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/gwycjr.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/zgcl.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/zhd1.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/zhd2.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/zgclzk.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/zhd2.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/zgclzk.png" /></a></div>
-							<div class="swiper-slide"><a href="#"><img src="ui/img/zhd2.png" /></a></div>
+							<div class="swiper-slide"><a href="#"><img src="" /></a></div>
+							<div class="swiper-slide"><a href="#"><img src="" /></a></div>
+							<div class="swiper-slide"><a href="#"><img src="" /></a></div>
+							<div class="swiper-slide"><a href="#"><img src="" /></a></div>
 						</div>
-						<div class="swiper-pagination"></div><!-- 分页 -->
+						<div class="swiper-pagination"></div>
 					</div>
+
 					<script>
 						$('.xuanfu_text a').text($('.first_part_left a').eq(0).text())
 						$(function () {
-
 							var mySwiper = new Swiper('.swiper-container', {
 								direction: 'horizontal', //水平滚动
-								loop: true, //循环模式
-								autoplay: 5000, //自动播放 5s走一次
-								speed: 500, //滚动一次的时间
+								autoplay: 3000, //自动滑动 几s滑动一次
+								autoplayDisableOnInteraction: false, //点击分页器后继续自动滑动
+								speed: 500, //滑动一次的时间
+								loop: true, //循环轮播
+								//设置分页器
 								pagination: '.swiper-pagination',
-
-							})
-
+								paginationClickable: true, //点击分页
+							});
 							var i = 0;
+							var l = $(".first_part_left a").length
 							setInterval(function () {
+
 								i++;
-								if (i > 9) {
+								if (i > l - 1) {
 									i = 0;
 								}
-								$('.xuanfu_text a').text($('.first_part_left a').eq(i).text())
-							}, 5500)
+								$('.xuanfu_text a').text($(".first_part_left a").eq(i).text());
 
-
-						})
+							}, 3500);
+						});
 					</script>
 				</div>
 			</div>
@@ -188,7 +205,7 @@
 							</div>
 						</div>
 						<div class="qiuzhi_title_right">
-							<a href="#" class="qiuzhi_title_right_gengduo"><img src="ui/img/icon009.png" />发布求职信息</a><span>|</span>
+							<a href="#" class="qiuzhi_title_right_gengduo"><img src="ui/img/icon009.png" width="15px" height="15px" />发布求职信息</a><span>|</span>
 							<a href="#" class="gengduo_msg">更多求职信息>></a>
 						</div>
 					</div>
@@ -352,7 +369,7 @@
 						<div class="youxiuqiyejia_title_left">
 							<div class="smallicon youxiuqiyejiaicon"></div>
 							<div class="youxiuqiyejia_title_wz">
-								<img src="ui/img/icon008.png" />优秀企业家
+								<img src="ui/img/icon008.png" style="vertical-align: top" />优秀企业家
 							</div>
 						</div>
 						<div class="youxiuqiyejia_title_right">
@@ -364,7 +381,7 @@
 							<img src="ui/img/img004.png" />
 						</div>
 						<div class="youxiuqiyejia_main_wz">
-							<h5>牛根生:从企业家到专职慈善家</h5>
+							<h5 title="牛根生:从企业家到专职慈善家">牛根生:从企业家到专职慈善家</h5>
 							<p>牛根生,蒙牛集团创始人,老牛基金会创 始人、名誉会长,“全球捐股第一人”入 选“影响中国生活方式10大人物”牛根生
 							</p>
 						</div>
@@ -374,7 +391,7 @@
 							<img src="ui/img/img005.png" />
 						</div>
 						<div class="youxiuqiyejia_main_wz">
-							<h5>李开复:海量数据赋能Ai,中国或在...</h5>
+							<h5 title="李开复:海量数据赋能Ai,中国或在在皑皑的的">李开复:海量数据赋能Ai,中国或在在皑皑的的</h5>
 							<p>1961年12月3日出生于台湾省新北市中和 区,祖籍四川成都,现已移居北京市。 李开复曾就读于卡内基梅隆大学,获计算
 							</p>
 						</div>
@@ -384,7 +401,7 @@
 							<img src="ui/img/img006.png" />
 						</div>
 						<div class="youxiuqiyejia_main_wz">
-							<h5>陈士骏:华裔小伙陈士骏身价亿万</h5>
+							<h5 title="陈士骏:华裔小伙陈士骏身价亿万">陈士骏:华裔小伙陈士骏身价亿万</h5>
 							<p>陈士骏:华裔小伙陈士骏身价亿万 陈士骏( Steve Chen,1978年-)是华 商美籍企业家,为网络影音分享网站 You Tube的创办人之一。目前是美国杂志</p>
 						</div>
 					</a>
@@ -393,7 +410,7 @@
 							<img src="ui/img/img007.png" />
 						</div>
 						<div class="youxiuqiyejia_main_wz">
-							<h5>谢家华:童年可谓顺风顺水</h5>
+							<h5 title="谢家华:童年可谓顺风顺水">谢家华:童年可谓顺风顺水</h5>
 							<p>谢家华, zappos的创始人之一,21岁放 弃读博机会做了一名普通的程序员,并创 办了一家小小的网络广告公司
 							</p>
 						</div>
@@ -405,7 +422,7 @@
 					<div class="volunteer_title_left">
 						<div class="smallicon volunteericon"></div>
 						<div class="volunteer_title_wz">
-							<img src="ui/img/icon010.png" />志愿者风采
+							<img src="ui/img/太阳.png" />志愿者风采
 						</div>
 					</div>
 					<div class="volunteer_title_right">
@@ -437,7 +454,7 @@
 							<div class="qiuzhi_title_left">
 								<div class="smallicon guojiazhengcheicon"></div>
 								<div class="qiuzhi_title_wz">
-									<img src="ui/img/icon011.png" />国家政策
+									<img src="ui/img/政策.png"  width="24"/>国家政策
 								</div>
 							</div>
 							<div class="qiuzhi_title_right">
@@ -447,26 +464,26 @@
 						<a class="xingwen" href="#">
 							<img src="ui/img/img011_12.png" />
 							<div class="xingwen_wz">
-								<h5>习近平:决胜全面建成小康社会夺取新时代中国特色社会主义</h5>
+								<h5 class="sandian" title="习近平:决胜全面建成小康社会夺取新时代中国特色社会主义">习近平:决胜全面建成小康社会夺取新时代中国特色社会主义呀呀呀呀呀呀晕晕</h5>
 								<p>中国共产党第十九次全国代表大会,是在全面建成小康社会决胜阶段 中国特色社会主义进入新时代的关键时期召开的一次十分重要的大会 大会的主题是:不忘初心,牢记使命,高举中国特色社会主义伟大旗
-									帜,决胜全面建成小康社会,夺取新时代中国特色社会主义伟大胜利 为实现中华民族伟大复兴的中国梦不懈奋斗。不忘初心,方得始终断 前进的根本动力。全党同志一定要永远与人民同呼吸、共命运
+									帜,决胜全面建成小康社会,夺取新时代中国特色社会主义伟大胜利 为实现中华民族伟大复兴的中国梦不懈奋斗。不忘初心,方得始终断 前进的根本动力。全党同志一定要永远与人民同呼吸、共命运代中国特色社会主义伟大胜利 为实现中华民族伟大复兴的中国梦不懈奋斗。不忘初心,方得始终断 前进的根本动力。全党同志一定要永远与人民同呼吸、共命运
 								</p>
 							</div>
 						</a>
 						<a href="#" class="duanxingwen">
-							<p class="duanxingwen_left">国务院办公厅关于调鳘国务院残疾人工作委员会组成人员的通知</p>
+							<p class="duanxingwen_left sandian" title="1">国务院办公厅关于调鳘国务院残疾人工作委员会组成人员的通知</p>
 							<p class="duanxingwen_right">2018-05-22</p>
 						</a>
 						<a href="#" class="duanxingwen">
-							<p class="duanxingwen_left">鲁勇连续第五年参加北京市全国助残日主题活动</p>
+							<p class="duanxingwen_left sandian" title="1">鲁勇连续第五年参加北京市全国助残日主题活动</p>
 							<p class="duanxingwen_right">2018-05-21</p>
 						</a>
 						<a href="#" class="duanxingwen">
-							<p class="duanxingwen_left">人民日报:携手助残共同发展——写在第二十八次全国助残日之际</p>
+							<p class="duanxingwen_left sandian" title="1">人民日报:携手助残共同发展——写在第二十八次全国助残日之际</p>
 							<p class="duanxingwen_right">2018-05-21</p>
 						</a>
 						<a href="#" class="duanxingwen">
-							<p class="duanxingwen_left">人力资源社会保障部中国残疾人联合会赴贫困县开展农村贫困残疾人就业帮.</p>
+							<p class="duanxingwen_left sandian" title="1">人力资源社会保障部中国残疾人联合会赴贫困县开展农村贫困残疾人就业帮.</p>
 							<p class="duanxingwen_right">2018-05-21</p>
 						</a>
 					</div>
@@ -476,7 +493,7 @@
 								<div class="smallicon canlianzhixunicon">
 								</div>
 								<div class="qiuzhi_title_wz">
-									<img src="ui/img/icon012.png" />残联资讯
+									<img src="ui/img/残联资讯.png" />残联资讯
 								</div>
 							</div>
 							<div class="qiuzhi_title_right">
@@ -487,9 +504,9 @@
 						<a class="xingwen" href="#">
 							<img src="ui/img/img011_52.png" />
 							<div class="xingwen_wz">
-								<h5>新华网评:全面建成小康社会,残疾人一个也不能少小康路上,与残疾人共奋进</h5>
+								<h5 title="111" class="sandian">新华网评:全面建成小康社会,残疾人一个也不能少小康路上,与残疾人共奋进</h5>
 								<p>扶药先扶志,扶必扶智。扶志就是扶思想、扶观念、扶信心,帮助 残疾人树立起摆脱困境的斗志和勇气:扶智就是扶知识、扶技术、扶 思路,帮助和指导残疾人着力提升脱笸富的综合素质。对残疾人來
-									说,公平的教育和充分的就业创业非常重要,要让他们通过接受良好 的教育和实现充分的就业创业,用自己的智慧和双手脱贫数富、点亮 人生。具体而言,要以多种形式动英困家庭残疾儿童完成学前教育
+									说,公平的教育和充分的就业创业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业创业,用自己的智慧和双手脱贫数富、点亮 人生。具体而言,要以多种形式动英困家庭残疾儿童完成学前教育
 								</p>
 							</div>
 						</a>
@@ -516,7 +533,7 @@
 							<div class="qiuzhi_title_left">
 								<div class="smallicon chuanxingchuanyeicon"></div>
 								<div class="qiuzhi_title_wz">
-									<img src="ui/img/icon013.png" />创新创业
+									<img src="ui/img/创业.png" />创新创业
 								</div>
 							</div>
 							<div class="qiuzhi_title_right">
@@ -527,8 +544,12 @@
 						<a class="xingwen" href="#">
 							<img src="ui/img/img011_62.png" />
 							<div class="xingwen_wz">
-								<h5>市残联召开2017年上半年工作总结会议</h5>
+								<h5 title="3333" class="sandian">市残联召开2017年上半年工作总2017年上半年工作总结会议2017年上半年工作总结会议2017年上半年工作总结会议2017年上半年工作总结会议2017年上半年工作总结会议结会议2017年上半年工作总结会议</h5>
 								<p>吴文彦理事长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
+									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
+									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
+									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
+									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
 									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络”下功夫,加快推进残疾人小康进程一些难点工作落地;三是加 强了基础工作。集中就业、自主就业创业、辅助性就业等多种就业形
 								</p>
 							</div>
@@ -570,8 +591,8 @@
 								<img src="ui/img/img011_09.png" />
 							</div>
 							<div class="youxiuqiyejia_main_wz">
-								<h5>牛根生:从企业家到专职慈善家</h5>
-								<p>牛根生,蒙牛集团创始人,老牛基金会创 始人、名誉会长,“全球捐股第一人”入 选“影响中国生活方式10大人物”牛根生
+								<h5 title="1">牛根生:从企业家到专职慈善家</h5>
+								<p>牛根生,蒙牛集团创始人,老牛基金会创 始人、呀呀呀呀呀呀晕晕晕晕晕晕晕晕晕晕晕晕晕名誉会长,“全球捐股第一人”入 选“影响中国生活方式10大人物”牛根生
 								</p>
 							</div>
 						</a>
@@ -580,7 +601,7 @@
 								<img src="ui/img/img011_19.png" />
 							</div>
 							<div class="youxiuqiyejia_main_wz">
-								<h5>李开复:海量数据赋能Ai,中国或在...</h5>
+								<h5 title="1">李开复:海量数据赋能Ai,中国或在...</h5>
 								<p>1961年12月3日出生于台湾省新北市中和 区,祖籍四川成都,现已移居北京市。 李开复曾就读于卡内基梅隆大学,获计算
 								</p>
 							</div>
@@ -590,7 +611,7 @@
 								<img src="ui/img/img011_44.png" />
 							</div>
 							<div class="youxiuqiyejia_main_wz">
-								<h5>陈士骏:华裔小伙陈士骏身价亿万</h5>
+								<h5 title="1">陈士骏:华裔小伙陈士骏身价亿万</h5>
 								<p>陈士骏:华裔小伙陈士骏身价亿万 陈士骏( Steve Chen,1978年-)是华 商美籍企业家,为网络影音分享网站 You Tube的创办人之一。目前是美国杂志</p>
 							</div>
 						</a>
@@ -599,7 +620,7 @@
 								<img src="ui/img/img011_34.png" />
 							</div>
 							<div class="youxiuqiyejia_main_wz">
-								<h5>谢家华:童年可谓顺风顺水</h5>
+								<h5 title="1">谢家华:童年可谓顺风顺水</h5>
 								<p>谢家华, zappos的创始人之一,21岁放 弃读博机会做了一名普通的程序员,并创 办了一家小小的网络广告公司
 								</p>
 							</div>
@@ -610,7 +631,7 @@
 							<div class="youxiuqiyejia_title_left">
 								<div class="smallicon ganenqiangicon"></div>
 								<div class="youxiuqiyejia_title_wz">
-									<img src="ui/img/icon015.png" />感恩墙
+									<img src="ui/img/爱心.png" />感恩墙
 								</div>
 							</div>
 							<div class="youxiuqiyejia_title_right">
@@ -695,7 +716,7 @@
 					<div class="volunteer_title_left">
 						<div class="smallicon helpicon"></div>
 						<div class="volunteer_title_wz">
-							<img src="ui/img/icon016.png" />残友求助信息
+							<img src="ui/img/残友求助.png" />残友求助信息
 						</div>
 					</div>
 					<div class="volunteer_title_right">
@@ -706,7 +727,7 @@
 					<img src="ui/img/img012_13.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神呀呀呀呀呀呀经损伤,造成你你你你你</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -714,7 +735,7 @@
 					<img src="ui/img/img012_15.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -722,7 +743,7 @@
 					<img src="ui/img/img012_17.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -730,7 +751,7 @@
 					<img src="ui/img/img012_19.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -738,7 +759,7 @@
 					<img src="ui/img/img012_21.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -746,7 +767,7 @@
 					<img src="ui/img/img012_13.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -754,7 +775,7 @@
 					<img src="ui/img/img012_15.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -762,7 +783,7 @@
 					<img src="ui/img/img012_17.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -770,7 +791,7 @@
 					<img src="ui/img/img012_19.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -778,7 +799,7 @@
 					<img src="ui/img/img012_21.png" />
 					<p>我今年41岁了,因为1992年的一次交通事故,导致脊髓神经损伤,造成</p>
 					<div class="help_msg">
-						<p>求助类型:求医</p>
+						<p>求助类型:<span>求医</span></p>
 						<a href="#">查看详情</a>
 					</div>
 				</div>
@@ -789,7 +810,7 @@
 						<div class="youxiuqiyejia_title_left">
 							<div class="smallicon kejiicon"></div>
 							<div class="youxiuqiyejia_title_wz">
-								<img src="ui/img/icon019.png" />残疾人前沿科技
+								<img src="ui/img/科技.png" />残疾人前沿科技
 							</div>
 						</div>
 						<div class="youxiuqiyejia_title_right">
@@ -799,13 +820,13 @@
 					<a href="#" class="kejixingwen">
 						<img src="ui/img/img013_09.png" />
 						<div class="kejixingwen_jidan">
-							<h5>牛根生:从企业家到专职慈善家</h5>
+							<h5 title="333">牛根生:从企业家到专职慈善家从企业家到专职慈善家从企业家到专职慈善家从企业家到专职慈善家</h5>
 							<p>牛根生,蒙牛集团创始人,老牛基金会创始人 名誉会长,“全球捐股第一人”入选“影响中 国生活方式10大人物”牛根生嘎嘎嘎222222222222222222222222222222
 							</p>
 						</div>
 					</a>
 					<div class="duankejixingwen">
-						<a href="#">石景山区残联慰问康复机构残疾儿童</a>
+						<a href="#">石景山区残联慰问康复机构残疾儿童儿童儿童儿童儿童儿童儿童儿童儿童儿童儿童儿童</a>
 						<a href="#">丰台区走访慰问困难残疾儿童</a>
 						<a href="#">平谷区残联召开2018年专门协会工作会
 						</a>
@@ -820,7 +841,7 @@
 						<div class="youxiuqiyejia_title_left">
 							<div class="smallicon kangfuicon"></div>
 							<div class="youxiuqiyejia_title_wz">
-								<img src="ui/img/icon018.png" />残疾人康复
+								<img src="ui/img/康复中心.png" />残疾人康复
 							</div>
 						</div>
 						<div class="youxiuqiyejia_title_right">
@@ -830,7 +851,7 @@
 					<a href="#" class="kejixingwen">
 						<img src="ui/img/img013_11.png" />
 						<div class="kejixingwen_jidan">
-							<h5>手助残共同发展——写在第二十八</h5>
+							<h5 title="1111">手助残共同发展——写在第二十八</h5>
 							<p>5月20日是第二十八次全国助残日,主题为 全面建成小康社会,残疾人一个也不能少”。 在朝着全面建成小康社会的目标加快奋进的征
 							</p>
 						</div>
@@ -852,7 +873,7 @@
 						<div class="youxiuqiyejia_title_left">
 							<div class="smallicon wenhuaicon"></div>
 							<div class="youxiuqiyejia_title_wz">
-								<img src="ui/img/icon017.png" />助残文化
+								<img src="ui/img/文化.png" />助残文化
 							</div>
 						</div>
 						<div class="youxiuqiyejia_title_right">
@@ -862,7 +883,7 @@
 					<a href="#" class="kejixingwen">
 						<img src="ui/img/img013_13.png" />
 						<div class="kejixingwen_jidan">
-							<h5>牛根生:从企业家到专职慈善家</h5>
+							<h5 title="11">牛根生:从企业家到专职慈善家</h5>
 							<p>牛根生,蒙牛集团创始人,老牛基金会创始人 名誉会长,“全球捐股不不不不不不不不不不不不不不不不不不不不不不不不不不不不不不不不不不不不不 第一人”入选“影响中 国生活方式10大人物”牛根生
 							</p>
 						</div>
@@ -891,8 +912,9 @@
 						</div>
 					</div>
 					<div class="volunteer_title_right">
-						<a href="#" class="fangye">&lt;</a><span class="yeshu">1</span><span>/4</span>
-						<a href="#">&gt;</a>
+						<a href="#" class="fangye"><img src="ui/img/左切换.png" width="18"></a>
+						<span class="yeshu">1</span><span>/4</span>
+						<a href="#"><img src="ui/img/右切换.png" width="18"></a>
 					</div>
 				</div>
 				<div class="firendlink">
