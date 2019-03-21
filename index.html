@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="ui/css/swiper-3.4.2.min.css">
 	<link rel="icon" type="image/x-icon" href="ui/img/favicon.ico" />
 	<link rel="shortcut icon" type="image/x-icon" href="ui/img/favicon.ico" />
-	<!-- <script src="ui/js/jquery.min.js"></script> -->
-	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="ui/js/jquery.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 	<script src="ui/js/swiper-3.4.2.min.js"></script>
 </head>
 
@@ -27,8 +27,6 @@
 				</div>
 				<div class="header_top_link_right">
 					<a href="#">请登录<img src="http://www.baidu.com/img/bd_logo1.png?qua=high" class="round_icon"></a>
-					<!-- <img src="${user.headPath}" class="round_icon"> -->
-
 					<ul style="display: none">
 						<li style="margin-top: 36px;" onclick="">个人中心</li>
 						<li onclick="update_pswd()">修改密码</li>
@@ -37,26 +35,7 @@
 					</a><span>|</span>
 					<a href="">注册</a>
 				</div>
-				<!-- <div class="header_top_link_right">
-					<a href="./login.html">用户登录
-						<img src="http://www.baidu.com/img/bd_logo1.png?qua=high" width="32" height="32" class="round_icon">
-					</a>
-					<span>|</span>
-					<a href="./register.html">新用户注册</a>
-					<ul>
-						<li>修改密码</li>
-						<li>退出登录</li>
-					</ul>
-				</div>
-				<script>
-					$('.header_top_link_right ul').hide()
-					$('.header_top_link_right a').eq(0).mouseover(function(){
-						$('.header_top_link_right ul').stop().slideDown(500)
-					})
-					$('.header_top_link_right ul').mouseleave(function(){
-						$(this).stop().slideUp(500)
-					})
-				</script> -->
+
 			</div>
 		</div>
 		<div class="header_bottom">
@@ -210,24 +189,108 @@
 						</div>
 					</div>
 					<div class="qiuzhi_xuanzhe">
-						<div class="qiuzhi_xuanzhe001">
-							<select class="hanye">
-								<option>选择行业</option>
-							</select>
-							<select class="zhiye">
-								<option>选择职业</option>
-							</select>
-							<select class="workcity">
-								<option>选择工作地点</option>
-							</select>
-						</div>
 						<div class="qiuzhi_xuanzhe002">
-							<select name="">
-								<option value="">选择企业</option>
-							</select>
+							<input type="text" placeholder="输入企业名称/职位">
 							<a href="#" class="qiuzhi_xuanzhe002anniu"><img src="ui/img/icon002.png" />找工作</a>
 							<a href="#">高级搜索</a>
 						</div>
+						<div class="qiuzhi_xuanzhe001">
+							<!-- 选择行业二级菜单 -->
+							<h2 class="choose_industry">选择行业</h2>
+							<ul class="industry_level_1">
+								<li>北京
+									<ul class="industry_level_2">
+										<li>北京一</li>
+										<li>北京二</li>
+										<li>北京三</li>
+									</ul>
+								</li>
+								<li>上海
+									<ul class="industry_level_2">
+										<li>上海一</li>
+										<li>上海二</li>
+										<li>上海三</li>
+									</ul>
+								</li>
+								<li>广东
+									<ul class="industry_level_2">
+										<li>广东一</li>
+										<li>广东二</li>
+										<li>广东三</li>
+									</ul>
+								</li>
+							</ul>
+							<!-- 选择城市二级菜单 -->
+							<h2 class="choose_city">选择城市</h2>
+							<ul class="city_level_1">
+								<li>北京
+									<ul class="city_level_2">
+										<li>北京一</li>
+										<li>北京二</li>
+										<li>北京三</li>
+									</ul>
+								</li>
+								<li>上海
+									<ul class="city_level_2">
+										<li>上海一</li>
+										<li>上海二</li>
+										<li>上海三</li>
+									</ul>
+								</li>
+								<li>广东
+									<ul class="city_level_2">
+										<li>广东一</li>
+										<li>广东二</li>
+										<li>广东三</li>
+									</ul>
+								</li>
+							</ul>
+
+						</div>
+						<script>
+							// 点击选择行业 下拉菜单显示
+							$('.choose_industry').click(function (e) {
+								$('.industry_level_1').slideToggle()
+							});
+							// 一级菜单鼠标移入 显示对应的二级菜单
+							$('.industry_level_1>li').hover(function () {
+								$(this).find('.industry_level_2').show()
+
+							}, function () {
+								$(this).find('.industry_level_2').hide()
+							});
+
+							// 点击二级菜单选项 选中
+							$('.industry_level_2>li').click(function (e) {
+								e.preventDefault();
+								var str = $(this).text()
+								console.log(str);
+								$('.choose_industry').text(str);
+								$('.industry_level_1').hide()
+							});
+
+							// 点击选择城市 下拉菜单显示
+							$('.choose_city').click(function (e) {
+								$('.city_level_1').slideToggle()
+							});
+							// 一级菜单鼠标移入 显示对应的二级菜单
+							$('.city_level_1>li').hover(function () {
+								$(this).find('.city_level_2').show()
+
+							}, function () {
+								$(this).find('.city_level_2').hide()
+							});
+
+							// 点击二级菜单选项 选中
+							$('.city_level_2>li').click(function (e) {
+								e.preventDefault();
+								var str = $(this).text()
+								console.log(str);
+								$('.choose_city').text(str);
+								$('.city_level_1').hide()
+							});
+						</script>
+
 					</div>
 					<div class="qiuzhi_main">
 						<table id="tab" border="0" cellspacing="" cellpadding="">
@@ -454,7 +517,7 @@
 							<div class="qiuzhi_title_left">
 								<div class="smallicon guojiazhengcheicon"></div>
 								<div class="qiuzhi_title_wz">
-									<img src="ui/img/政策.png"  width="24"/>国家政策
+									<img src="ui/img/政策.png" width="24" />国家政策
 								</div>
 							</div>
 							<div class="qiuzhi_title_right">
@@ -466,7 +529,8 @@
 							<div class="xingwen_wz">
 								<h5 class="sandian" title="习近平:决胜全面建成小康社会夺取新时代中国特色社会主义">习近平:决胜全面建成小康社会夺取新时代中国特色社会主义呀呀呀呀呀呀晕晕</h5>
 								<p>中国共产党第十九次全国代表大会,是在全面建成小康社会决胜阶段 中国特色社会主义进入新时代的关键时期召开的一次十分重要的大会 大会的主题是:不忘初心,牢记使命,高举中国特色社会主义伟大旗
-									帜,决胜全面建成小康社会,夺取新时代中国特色社会主义伟大胜利 为实现中华民族伟大复兴的中国梦不懈奋斗。不忘初心,方得始终断 前进的根本动力。全党同志一定要永远与人民同呼吸、共命运代中国特色社会主义伟大胜利 为实现中华民族伟大复兴的中国梦不懈奋斗。不忘初心,方得始终断 前进的根本动力。全党同志一定要永远与人民同呼吸、共命运
+									帜,决胜全面建成小康社会,夺取新时代中国特色社会主义伟大胜利 为实现中华民族伟大复兴的中国梦不懈奋斗。不忘初心,方得始终断 前进的根本动力。全党同志一定要永远与人民同呼吸、共命运代中国特色社会主义伟大胜利
+									为实现中华民族伟大复兴的中国梦不懈奋斗。不忘初心,方得始终断 前进的根本动力。全党同志一定要永远与人民同呼吸、共命运
 								</p>
 							</div>
 						</a>
@@ -506,7 +570,9 @@
 							<div class="xingwen_wz">
 								<h5 title="111" class="sandian">新华网评:全面建成小康社会,残疾人一个也不能少小康路上,与残疾人共奋进</h5>
 								<p>扶药先扶志,扶必扶智。扶志就是扶思想、扶观念、扶信心,帮助 残疾人树立起摆脱困境的斗志和勇气:扶智就是扶知识、扶技术、扶 思路,帮助和指导残疾人着力提升脱笸富的综合素质。对残疾人來
-									说,公平的教育和充分的就业创业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业创业,用自己的智慧和双手脱贫数富、点亮 人生。具体而言,要以多种形式动英困家庭残疾儿童完成学前教育
+									说,公平的教育和充分的就业创业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好
+									的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业业非常重要,要让他们通过接受良好 的教育和实现充分的就业创业,用自己的智慧和双手脱贫数富、点亮
+									人生。具体而言,要以多种形式动英困家庭残疾儿童完成学前教育
 								</p>
 							</div>
 						</a>
@@ -546,10 +612,14 @@
 							<div class="xingwen_wz">
 								<h5 title="3333" class="sandian">市残联召开2017年上半年工作总2017年上半年工作总结会议2017年上半年工作总结会议2017年上半年工作总结会议2017年上半年工作总结会议2017年上半年工作总结会议结会议2017年上半年工作总结会议</h5>
 								<p>吴文彦理事长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
-									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
-									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
-									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
-									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都 功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
+									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都
+									功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
+									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都
+									功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
+									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都
+									功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
+									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络长充分肯定了上半年工作成绩:一是凝聚了强烈的共识, 紧紧围绕市委巡视反馈意见做好整改落实工作,紧紧围绕“服务首都
+									功能定位”谋划工作,紧紧围绕首都安全稳定做好本职工作,形成了
 									行动自觉,做到了“态度鲜明、行动有力”;二是围绕“精准、统筹 网络”下功夫,加快推进残疾人小康进程一些难点工作落地;三是加 强了基础工作。集中就业、自主就业创业、辅助性就业等多种就业形
 								</p>
 							</div>

@@ -402,6 +402,7 @@
 				height: 110px;
 				padding: 10px;
 				background-color: #d2b68b;
+				position: relative;
 			}
 
 			.second_part_right,
@@ -535,20 +536,88 @@
 				vertical-align: middle;
 			}
 
-			.qiuzhi_xuanzhe001 select {
-				width: 290px;
-				margin: 4px 8px;
-				height: 50px;
-				line-height: 50px;
-				border: 0px;
-				padding: 0 5px;
+			/* 二级联动下拉菜单 */
+			.choose_industry,
+			.choose_city {
+				width: 194px;
+				height: 38px;
+				line-height: 38px;
+				color: rgb(80, 78, 78);
+				padding-left: 16px;
+				font-size: 16px;
+				font-weight: 400;
+				cursor: pointer;
+				border: 1px skyblue solid;
+				margin-top: 7%;
+				margin-left: 10px;
+				background: white;
+				background-image: url(../../ui/img/下拉菜单箭头.png);
+				background-repeat: no-repeat;
+				background-size: 25px;
+				background-position: 95% 52%;
+				user-select: none;
 			}
 
-			.qiuzhi_xuanzhe002 select {
+			.choose_city {
+				float: left;
+				margin-top: -53px;
+				margin-left: 33%;
+			}
+
+			.industry_level_1,
+			.industry_level_2,
+			.city_level_1,
+			.city_level_2 {
+				display: none;
+				width: 106px;
+				position: absolute;
+				top: 115px;
+				left: 21px;
+			}
+			.city_level_1{
+				left: 317px;
+			}
+			.industry_level_2 ,
+			.city_level_2{
+				top: 0px;
+				left: 104px;
+			}
+
+			.industry_level_1>li ,
+			.city_level_1>li{
+				height: 38px;
+				line-height: 38px;
+				background: white;
+				border-bottom: 0.5px #ddd solid;
+				padding-left: 1.5em;
+			}
+
+			.industry_level_1>li:hover,
+			.city_level_1>li:hover {
+				cursor: pointer;
+				background: whitesmoke;
+				background-image: url(../../ui/img/二级菜单右.png);
+				background-repeat: no-repeat;
+				background-size: 20px;
+				background-position: 95% 52%;
+			}
+
+			.industry_level_2>li,
+			.city_level_2>li {
+				height: 38px;
+				line-height: 38px;
+				background: whitesmoke;
+				border-bottom: 0.5px #ddd solid;
+				padding-left: 1.5em;
+			}
+			/* 求职搜索 */
+			.qiuzhi_xuanzhe002 input {
 				float: left;
 				width: 600px;
-				height: 50px;
+				height: 40px;
 				margin: 4px 8px;
+				text-indent: 1.5em;
+				font-size: 16px;
 			}
 
 			.qiuzhi_xuanzhe002 a {
@@ -556,7 +625,7 @@
 				float: left;
 				line-height: 30px;
 				padding: 5px 20px;
-				margin: 10px 15px;
+				margin: 8px 15px;
 				color: white;
 			}
 
@@ -714,7 +783,8 @@
 				font-size: 20px;
 				font-weight: bold;
 			}
-			.xingwen_wz p{
+
+			.xingwen_wz p {
 				margin-top: 10px;
 				text-indent: 2em;
 				overflow: hidden;
@@ -723,6 +793,7 @@
 				-webkit-line-clamp: 6;
 				-webkit-box-orient: vertical;
 			}
+
 			.duanxingwen_left {
 				float: left;
 			}
@@ -846,9 +917,11 @@
 				margin: 0px auto;
 				overflow: hidden;
 			}
-			.help_msg{
+
+			.help_msg {
 				margin-top: 20px;
 			}
+
 			.help_msg p {
 				font-family: '黑体';
 				padding: 0px 10px;
@@ -857,12 +930,14 @@
 				margin-top: 4px;
 				font-size: 14px;
 				color: #929292;
-				
+
 			}
-			.help_msg p span{
+
+			.help_msg p span {
 				font-family: '黑体';
 				margin-left: 10px;
 			}
+
 			.help_msg a {
 				margin: 0 15px;
 				float: right;
@@ -939,9 +1014,11 @@
 				margin: 0px auto;
 				overflow: hidden;
 			}
+
 			.duankejixingwen {
 				margin-left: 20px;
 			}
+
 			.duankejixingwen a {
 				font-size: 15px;
 				width: 400px;
@@ -1058,8 +1135,9 @@
 				font-weight: normal;
 
 			}
+
 			/* 共用css */
-			.sandian{
+			.sandian {
 				overflow: hidden;
 				text-overflow: ellipsis;
 				display: -webkit-box;
@@ -1068,11 +1146,6 @@
 			}
 
 
-			.volunteer_title_right *{
+			.volunteer_title_right * {
 				font-size: 18px;
 			}
-			
-
-
-
-
